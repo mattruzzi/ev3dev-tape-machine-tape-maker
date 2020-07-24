@@ -13,7 +13,7 @@ elif choice == '2':
 
 tapeData = data
 binaryData = ''.join(format(ord(i), 'b') for i in tapeData)
-print(binaryData)
+#print(binaryData)
 
 tapePrintHTML = '<!doctype html> \
 <html lang=en>\
@@ -27,7 +27,7 @@ tapePrintHTML = '<!doctype html> \
 binaryDataHTML = ""
 for x in binaryData:
     binaryDataHTML = binaryDataHTML + str('<gray></gray>')
-    print(x)
+    #print(x)
     if (x == "1"):
         binaryDataHTML = binaryDataHTML + str('<white></white>')
     else:
@@ -37,10 +37,10 @@ binaryDataHTML = binaryDataHTML + str('<gray></gray>')
 tapePrintHTML = tapePrintHTML + binaryDataHTML
 
 tapePrintHTML = tapePrintHTML + '</body></html>'
-print(tapePrintHTML)
+#print(tapePrintHTML)
 
 base64HTML = base64.b64encode(tapePrintHTML.encode("utf-8"))
-print(base64HTML)
+#print(base64HTML)
 base64URL = b"data:text/html;base64," + base64HTML
 print(base64URL)
 webbrowser.open(str(base64URL))
